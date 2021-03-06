@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container" style="margin-top: 25px;">
+  <h2 style="text-align: center;"><%= title %></h2>
+  <form action="/update" method="post">
+    <input type="hidden" value="<%= user.id %>" name="id">
+    <div class="form-group">
+        <label for="kode">Kode Barang</label>
+        <input type="text" class="form-control" id="kode" placeholder="Masukan kode barang " value="<%= user.kode %>" name="kode" required>
+      </div>
+    <div class="form-group">
+      <label for="name">Nama Barang</label>
+      <input type="text" class="form-control" id="nama" placeholder="Masukan nama barang" value="<%= user.nama %>" name="nama" required>
+    </div>
+    <div class="form-group">
+      <label for="merek">Merek Barang</label>
+      <input type="text" class="form-control" id="merek" placeholder="Masukan merek barang" value="<%= user.merek %>" name="merek" required>
+    </div>
+    <div class="form-group">
+      <label for="stok">Stok Barang</label>
+      <input type="text" class="form-control" id="stok" placeholder="Masukan stok barang" value="<%= user.stok %>" name="stok" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Tambah Barang</button>
+  </form>
+
+</div>
+</body>
+</html>
